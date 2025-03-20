@@ -11,6 +11,9 @@ public class PolynomialEvaluator {
         System.out.println("Please enter an X- Value");
         double x = input.nextDouble();
 
-        for {int }
+        for (int i = 0; i < args.length; i++) {
+            
+        }
+        input.close();
     }
 }
