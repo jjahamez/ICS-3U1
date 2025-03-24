@@ -12,7 +12,7 @@ public class PolynomialEvaluator {
         double x = input.nextDouble();
         input.close();
 
-        StringTokenizer st = new StringTokenizer(poly, " "); // seperates terms
+        StringTokenizer st = new StringTokenizer(poly, " "); // separates terms
         while (st.hasMoreTokens()) {
             String term = st.nextToken();   
             if (term.contains("x")) { 
