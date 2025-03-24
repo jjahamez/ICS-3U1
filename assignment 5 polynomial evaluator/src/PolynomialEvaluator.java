@@ -14,10 +14,13 @@ public class PolynomialEvaluator {
 
         StringTokenizer st = new StringTokenizer(poly, " "); // separates terms
         while (st.hasMoreTokens()) {
-            String term = st.nextToken();  
-            if (term.contains("x")) {
+            String term = st.nextToken();   
+            if (term.contains("x")) { 
+                if (term.indexOf('^') == -1) {  
+                    term += "^1";  // if no exponent is provided treat as ^1
+                }
                 double coefficient = Double.parseDouble(term.substring(0, term.indexOf('x')));
-                int exponent = Integer.parseInt(term.substring(term.indexOf('^') + 1)); // determines if before x or after ^
+                double exponent = Double.parseDouble(term.substring(term.indexOf('^') + 1)); // determines if before x or after ^
                 sum += coefficient * Math.pow(x, exponent); // if term has "x"
             } else {
                 sum += Double.parseDouble(term); // constants
