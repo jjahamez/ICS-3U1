@@ -21,7 +21,7 @@ public class PolynomialEvaluator {
                 }
                 double coefficient = Double.parseDouble(term.substring(0, term.indexOf('x')));
                 double exponent = Double.parseDouble(term.substring(term.indexOf('^') + 1)); // determines if before x or after ^
-                sum += coefficient * Math.pow(x, exponent); // if "x"
+                sum += coefficient * Math.pow(x, exponent); // if term has "x"
             } else {
                 sum += Double.parseDouble(term); // constants
             }
